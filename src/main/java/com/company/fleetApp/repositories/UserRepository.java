@@ -9,5 +9,6 @@ import com.company.fleetApp.models.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 	User findByUsername(String username);
-	
+
+	User findByFirstnameAndLastname(String firstname, String lastname);
 }

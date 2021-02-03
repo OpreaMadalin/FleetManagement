@@ -6,6 +6,7 @@ $('document').ready(function() {
 		event.preventDefault();		
 		var href= $(this).attr('href');		
 		$.get(href, function(employee, status){
+		    $('#txtUsernameEdit').val(employee.username);
 			$('#txtAddressEdit').val(employee.address);
 			$('#txtCityEdit').val(employee.city);
 			$('#ddlNationalityEdit').val(employee.countryid);			
@@ -68,16 +69,3 @@ $('document').ready(function() {
 		});
 	});	
 });
-
-
-
-
-//function fcnUpload(url){
-//	console.log("Upload button was clicked");
-//	//var href = $(this).attr('href');
-//	var href = url;
-//	console.log("End point of upload: " + href);
-//	$.post(href, function(data, status){
-//		console.log(data);
-//	});
-//}
